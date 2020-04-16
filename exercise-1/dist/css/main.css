@@ -1,0 +1,285 @@
+/*! project-name v0.0.1 | (c) 2020 YOUR NAME*/@import url(./normalize.css);
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* line 19, src/sass/base/_global.scss */
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+/* line 24, src/sass/base/_global.scss */
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+  margin: 0;
+}
+
+/* line 29, src/sass/base/_global.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 34, src/sass/base/_global.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 39, src/sass/base/_global.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 1, src/sass/modules/_header-wrapper.scss */
+.header-wrapper {
+  background-color: #EB0B1D;
+  height: 90px;
+  width: 100%;
+}
+
+/* line 1, src/sass/modules/_section-wrapper.scss */
+.section-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* line 1, src/sass/modules/_tick-tock.scss */
+.tick-tock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 5, src/sass/modules/_tick-tock.scss */
+.tick-tock-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 800px) {
+  /* line 5, src/sass/modules/_tick-tock.scss */
+  .tick-tock-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/* line 14, src/sass/modules/_tick-tock.scss */
+.tick-tock-row:nth-child(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 800px) {
+  /* line 14, src/sass/modules/_tick-tock.scss */
+  .tick-tock-row:nth-child(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* line 23, src/sass/modules/_tick-tock.scss */
+.tick-tock-image-wrapper {
+  width: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@media (max-width: 800px) {
+  /* line 23, src/sass/modules/_tick-tock.scss */
+  .tick-tock-image-wrapper {
+    width: 100%;
+  }
+}
+
+/* line 33, src/sass/modules/_tick-tock.scss */
+.tick-tock-text-wrapper {
+  width: 50%;
+  padding: 0 40px 0 20px;
+}
+
+@media (max-width: 800px) {
+  /* line 33, src/sass/modules/_tick-tock.scss */
+  .tick-tock-text-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px 40px 15px;
+  }
+}
+
+/* line 44, src/sass/modules/_tick-tock.scss */
+.tick-tock-heading {
+  font-size: 24px;
+  color: #000000;
+}
+
+/* line 49, src/sass/modules/_tick-tock.scss */
+.tick-tock-text {
+  font-size: 16px;
+  color: #000000;
+  font-family: 'Roboto-Light';
+}
+
+/* line 1, src/sass/modules/_section-heading.scss */
+.section-heading {
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+/* line 5, src/sass/modules/_section-heading.scss */
+.section-heading-wrapper {
+  padding: 80px 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* line 11, src/sass/modules/_section-heading.scss */
+.section-heading-title {
+  color: #9B9DA1;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  padding-bottom: 5px;
+}
+
+/* line 19, src/sass/modules/_section-heading.scss */
+.section-heading-h2 {
+  color: black;
+  font-size: 32px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+}
+
+/* line 26, src/sass/modules/_section-heading.scss */
+.section-heading-text {
+  font-family: 'Roboto-Light';
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* line 1, src/sass/modules/_gallery.scss */
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+@supports (grid-area: auto) {
+  /* line 1, src/sass/modules/_gallery.scss */
+  .gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+  @media (max-width: 400px) {
+    /* line 1, src/sass/modules/_gallery.scss */
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    }
+  }
+}
+
+/* line 18, src/sass/modules/_gallery.scss */
+.gallery-item {
+  width: 24.475%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* line 23, src/sass/base/_mixins.scss */
+.gallery-item:nth-child(n) {
+  margin-right: 0.7%;
+}
+
+/* line 27, src/sass/base/_mixins.scss */
+.gallery-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+/* line 24, src/sass/modules/_gallery.scss */
+.gallery-item:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 65%;
+}
+
+@supports (grid-area: auto) {
+  /* line 18, src/sass/modules/_gallery.scss */
+  .gallery-item {
+    margin: 0;
+    width: 100%;
+  }
+  /* line 35, src/sass/modules/_gallery.scss */
+  .gallery-item-1, .gallery-item-8 {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* line 44, src/sass/modules/_gallery.scss */
+.gallery-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  height: 260px;
+}
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  /* line 44, src/sass/modules/_gallery.scss */
+  .gallery-image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+  /* line 58, src/sass/modules/_gallery.scss */
+  .gallery-image-large {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+    width: 100%;
+    height: 100%;
+  }
+}

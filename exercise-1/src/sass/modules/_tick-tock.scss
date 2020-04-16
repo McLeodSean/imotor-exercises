@@ -1,0 +1,54 @@
+.tick-tock {
+	display: flex;
+	flex-wrap: wrap;
+
+	&-row {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		@include atMedium {
+			flex-wrap: wrap;
+		}
+
+		&:nth-child(2) {
+			flex-direction: row-reverse;
+
+			@include atMedium {
+				flex-direction: row;
+			}
+		}
+	}
+
+	&-image-wrapper {
+		width:50%;
+		display: inline-flex;
+
+		@include atMedium {
+			width: 100%;
+		}
+	}
+
+
+	&-text-wrapper {
+		width: 50%;
+		padding: 0 40px 0 20px;
+		
+		@include atMedium {
+			width: 100%;
+			text-align: center;
+			padding: 10px 15px 40px 15px;
+		}
+	}
+
+	&-heading {
+		font-size: 24px;
+		color: #000000;
+	}
+
+	&-text {
+		font-size: 16px;
+		color: #000000;
+		font-family: 'Roboto-Light';
+	}
+}
