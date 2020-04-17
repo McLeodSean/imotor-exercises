@@ -30,6 +30,12 @@
 }
 
 @mixin clearfix {
+	&::before {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
 	&::after {
 		content: "";
 		clear: both;

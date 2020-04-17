@@ -49,3 +49,100 @@ img {
   height: 90px;
   width: 100%;
 }
+
+/* line 1, src/sass/modules/_toolbox_wrapper.scss */
+.toolbox-wrapper {
+  display: block;
+  position: fixed;
+  width: 322px;
+  right: 0;
+  top: 190px;
+}
+
+/* line 1, src/sass/modules/_toolbox.scss */
+.toolbox {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 6, src/sass/modules/_toolbox.scss */
+.toolbox-row {
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  width: 100%;
+}
+
+/* line 13, src/sass/modules/_toolbox.scss */
+.toolbox-link {
+  border-bottom: 0;
+  text-align: center;
+  text-decoration: none;
+  background: #000;
+  line-height: 66px;
+}
+
+/* line 22, src/sass/modules/_toolbox.scss */
+.toolbox-icon-wrapper {
+  border-bottom: 1px solid #333;
+  float: left;
+  background-color: #000;
+  height: 67px;
+}
+
+/* line 33, src/sass/base/_mixins.scss */
+.toolbox-icon-wrapper::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* line 39, src/sass/base/_mixins.scss */
+.toolbox-icon-wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* line 31, src/sass/modules/_toolbox.scss */
+.toolbox-icon {
+  width: 70px;
+  float: none;
+  margin: 0;
+}
+
+/* line 37, src/sass/modules/_toolbox.scss */
+.toolbox-icon-svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  fill: #fff;
+  width: 34px;
+  height: 34px;
+}
+
+/* line 47, src/sass/modules/_toolbox.scss */
+.toolbox-icon-text {
+  margin: 0 auto;
+  float: none;
+  line-height: normal;
+  height: auto;
+  color: #fff;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+/* line 57, src/sass/modules/_toolbox.scss */
+.toolbox-text {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 14px;
+  width: 252px;
+  color: #000;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
