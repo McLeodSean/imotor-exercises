@@ -2,6 +2,11 @@
 	display: block;
 	position: fixed;
 	width: 322px;
-	right: 0;
+	right: -252px;
 	top: 190px;
+	transition: all 250ms ease-in;
+
+	&:hover {
+		right: 0px;
+	}
 }

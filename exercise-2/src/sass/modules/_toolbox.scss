@@ -8,6 +8,16 @@
 		vertical-align: top;
 		border: 0;
 		width: 100%;
+
+		&:hover {
+			.toolbox-icon-wrapper {
+				background-color: #bc271a;
+			}
+
+			.toolbox-text {
+				background-color: #404040;
+			}
+		}
 	}
 
 	&-link {
@@ -22,14 +32,16 @@
 	&-icon-wrapper {
 		@include clearfix;
 
-		border-bottom: 1px solid #333;
+		border-bottom: 1px solid #eb4d55;
 		float: left;
-		background-color: #000;
+		background-color: #d8312d;
 		height: 67px;
+		transition: background-color 150ms ease-in;
 	}
 
 	&-icon {
 		width: 70px;
+		height: 42px;
 		float: none;
 		margin: 0;
 	}
@@ -58,11 +70,12 @@
 		display: inline-block;
 		float: left;
 		text-align: left;
-		padding-left: 10px;
-		font-size: 14px;
+		padding-left: 24px;
+		font-size: 16px;
 		width: 252px;
-		color: #000;
-		background-color: #fff;
-		border-bottom: 1px solid #e5e5e5;
+		color: #ffffff;
+		background-color: #333333;
+		border-bottom: 1px solid #4d4d4d;
+		transition: background-color 150ms ease-in;
 	}
 }
