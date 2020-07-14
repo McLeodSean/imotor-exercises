@@ -43,13 +43,42 @@ img {
   width: 322px;
   right: -252px;
   top: 190px;
-  -webkit-transition: all 250ms ease-in;
-  transition: all 250ms ease-in;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
 
 /* line 9, src/sass/modules/_toolbox_wrapper.scss */
 .toolbox-wrapper:hover {
-  right: 0px;
+  -webkit-transform: translateX(-252px);
+          transform: translateX(-252px);
+}
+
+/* line 13, src/sass/modules/_toolbox_wrapper.scss */
+.toolbox-wrapper-left {
+  left: -252px;
+}
+
+/* line 16, src/sass/modules/_toolbox_wrapper.scss */
+.toolbox-wrapper-left:hover {
+  -webkit-transform: translateX(252px);
+          transform: translateX(252px);
+}
+
+@media (max-width: 800px) {
+  /* line 1, src/sass/modules/_toolbox_wrapper.scss */
+  .toolbox-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* line 27, src/sass/modules/_toolbox_wrapper.scss */
+  .toolbox-wrapper:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 /* line 1, src/sass/modules/_toolbox.scss */
@@ -59,7 +88,17 @@ img {
   margin: 0;
 }
 
-/* line 6, src/sass/modules/_toolbox.scss */
+@media (max-width: 800px) {
+  /* line 1, src/sass/modules/_toolbox.scss */
+  .toolbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* line 11, src/sass/modules/_toolbox.scss */
 .toolbox-row {
   display: inline-block;
   vertical-align: top;
@@ -67,18 +106,32 @@ img {
   width: 100%;
 }
 
-/* line 13, src/sass/modules/_toolbox.scss */
+/* line 18, src/sass/modules/_toolbox.scss */
 .toolbox-row:hover .toolbox-icon-wrapper {
   background-color: #bc271a;
 }
 
-/* line 17, src/sass/modules/_toolbox.scss */
+/* line 22, src/sass/modules/_toolbox.scss */
 .toolbox-row:hover .toolbox-text {
   background-color: #404040;
 }
 
-/* line 23, src/sass/modules/_toolbox.scss */
+@media (max-width: 800px) {
+  /* line 11, src/sass/modules/_toolbox.scss */
+  .toolbox-row {
+    display: block;
+  }
+}
+
+/* line 32, src/sass/modules/_toolbox.scss */
 .toolbox-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-bottom: 0;
   text-align: center;
   text-decoration: none;
@@ -86,10 +139,17 @@ img {
   line-height: 66px;
 }
 
-/* line 32, src/sass/modules/_toolbox.scss */
+/* line 41, src/sass/modules/_toolbox.scss */
+.toolbox-link-left {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+/* line 46, src/sass/modules/_toolbox.scss */
 .toolbox-icon-wrapper {
   border-bottom: 1px solid #eb4d55;
-  float: left;
   background-color: #d8312d;
   height: 67px;
   -webkit-transition: background-color 150ms ease-in;
@@ -109,15 +169,22 @@ img {
   display: table;
 }
 
-/* line 42, src/sass/modules/_toolbox.scss */
+@media (max-width: 800px) {
+  /* line 46, src/sass/modules/_toolbox.scss */
+  .toolbox-icon-wrapper {
+    width: 100%;
+  }
+}
+
+/* line 59, src/sass/modules/_toolbox.scss */
 .toolbox-icon {
   width: 70px;
   height: 42px;
   float: none;
-  margin: 0;
+  margin: auto;
 }
 
-/* line 49, src/sass/modules/_toolbox.scss */
+/* line 66, src/sass/modules/_toolbox.scss */
 .toolbox-icon-svg {
   position: relative;
   top: 0;
@@ -128,7 +195,7 @@ img {
   height: 34px;
 }
 
-/* line 59, src/sass/modules/_toolbox.scss */
+/* line 76, src/sass/modules/_toolbox.scss */
 .toolbox-icon-text {
   margin: 0 auto;
   float: none;
@@ -139,10 +206,9 @@ img {
   padding-bottom: 10px;
 }
 
-/* line 69, src/sass/modules/_toolbox.scss */
+/* line 86, src/sass/modules/_toolbox.scss */
 .toolbox-text {
   display: inline-block;
-  float: left;
   text-align: left;
   padding-left: 24px;
   font-size: 16px;
@@ -152,4 +218,11 @@ img {
   border-bottom: 1px solid #4d4d4d;
   -webkit-transition: background-color 150ms ease-in;
   transition: background-color 150ms ease-in;
+}
+
+@media (max-width: 800px) {
+  /* line 86, src/sass/modules/_toolbox.scss */
+  .toolbox-text {
+    display: none;
+  }
 }

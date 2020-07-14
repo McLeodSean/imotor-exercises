@@ -3,6 +3,11 @@
 	padding: 0;
 	margin: 0;
 
+	@include atMedium {
+		display: flex;
+		width: 100%;
+	}
+
 	&-row {
 		display: inline-block;
 		vertical-align: top;
@@ -18,32 +23,44 @@
 				background-color: #404040;
 			}
 		}
+
+		@include atMedium {
+			display: block;
+		}
 	}
 
 	&-link {
+		display: flex;
+		flex-direction: row;
 		border-bottom: 0;
 		text-align: center;
 		text-decoration: none;
 		background: #000;
 		line-height: 66px;
 
+		&-left {
+			flex-direction: row-reverse;
+		}
 	}
 
 	&-icon-wrapper {
 		@include clearfix;
 
 		border-bottom: 1px solid #eb4d55;
-		float: left;
 		background-color: #d8312d;
 		height: 67px;
 		transition: background-color 150ms ease-in;
+
+		@include atMedium {
+			width: 100%;
+		}
 	}
 
 	&-icon {
 		width: 70px;
 		height: 42px;
 		float: none;
-		margin: 0;
+		margin: auto;
 	}
 
 	&-icon-svg {
@@ -68,7 +85,6 @@
 
 	&-text {
 		display: inline-block;
-		float: left;
 		text-align: left;
 		padding-left: 24px;
 		font-size: 16px;
@@ -77,5 +93,9 @@
 		background-color: #333333;
 		border-bottom: 1px solid #4d4d4d;
 		transition: background-color 150ms ease-in;
+
+		@include atMedium {
+			display: none;
+		}
 	}
 }
