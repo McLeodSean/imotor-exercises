@@ -151,19 +151,18 @@ img {
   border-bottom: 0;
   text-align: center;
   text-decoration: none;
-  background: #000;
   line-height: 66px;
 }
 
-/* line 49, src/sass/modules/_toolbox.scss */
-.toolbox-link-left {
+/* line 48, src/sass/modules/_toolbox.scss */
+.toolbox-wrapper-left .toolbox-link {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-/* line 54, src/sass/modules/_toolbox.scss */
+/* line 53, src/sass/modules/_toolbox.scss */
 .toolbox-icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,27 +196,27 @@ img {
 }
 
 @media (max-width: 1268px) {
-  /* line 54, src/sass/modules/_toolbox.scss */
+  /* line 53, src/sass/modules/_toolbox.scss */
   .toolbox-icon-wrapper {
     width: 100%;
     border-right: 1px solid #eb4d55;
   }
 }
 
-/* line 74, src/sass/modules/_toolbox.scss */
+/* line 73, src/sass/modules/_toolbox.scss */
 .toolbox-icon {
   width: 85px;
   height: 40px;
 }
 
 @media (max-width: 1268px) {
-  /* line 74, src/sass/modules/_toolbox.scss */
+  /* line 73, src/sass/modules/_toolbox.scss */
   .toolbox-icon {
     width: 100%;
   }
 }
 
-/* line 83, src/sass/modules/_toolbox.scss */
+/* line 82, src/sass/modules/_toolbox.scss */
 .toolbox-icon-svg {
   position: relative;
   top: 0;
@@ -228,7 +227,7 @@ img {
   height: 40px;
 }
 
-/* line 93, src/sass/modules/_toolbox.scss */
+/* line 92, src/sass/modules/_toolbox.scss */
 .toolbox-icon-text {
   margin: 0 auto;
   float: none;
@@ -239,7 +238,7 @@ img {
   padding-top: 10px;
 }
 
-/* line 103, src/sass/modules/_toolbox.scss */
+/* line 102, src/sass/modules/_toolbox.scss */
 .toolbox-text {
   display: inline-block;
   text-align: left;
@@ -254,7 +253,7 @@ img {
 }
 
 @media (max-width: 1268px) {
-  /* line 103, src/sass/modules/_toolbox.scss */
+  /* line 102, src/sass/modules/_toolbox.scss */
   .toolbox-text {
     display: none;
   }

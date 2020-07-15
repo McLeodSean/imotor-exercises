@@ -43,10 +43,9 @@
 		border-bottom: 0;
 		text-align: center;
 		text-decoration: none;
-		background: #000;
 		line-height: 66px;
 
-		&-left {
+		.toolbox-wrapper-left & {
 			flex-direction: row-reverse;
 		}
 	}
