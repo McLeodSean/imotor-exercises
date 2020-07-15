@@ -8,6 +8,10 @@
 		width: 100%;
 	}
 
+	@include atSmall {
+		flex-wrap: wrap;
+	}
+
 	&-row {
 		display: inline-block;
 		vertical-align: top;
@@ -16,16 +20,20 @@
 
 		&:hover {
 			.toolbox-icon-wrapper {
-				background-color: #bc271a;
+				background-color: $brand-highlight-color;
 			}
 
 			.toolbox-text {
-				background-color: #404040;
+				background-color: $light-grey;
 			}
 		}
 
 		@include atMedium {
 			display: block;
+		}
+
+		@include atSmall {
+			flex-basis: 33.333333%;
 		}
 	}
 
@@ -46,21 +54,30 @@
 	&-icon-wrapper {
 		@include clearfix;
 
-		border-bottom: 1px solid #eb4d55;
-		background-color: #d8312d;
-		height: 67px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+
+		width: 85px;
+		border-bottom: 1px solid $brand-secondary-color;
+		background-color: $brand-primary-color;
+		height: 85px;
 		transition: background-color 150ms ease-in;
 
 		@include atMedium {
 			width: 100%;
+			border-right: 1px solid $brand-secondary-color;
 		}
 	}
 
 	&-icon {
-		width: 70px;
-		height: 42px;
-		float: none;
-		margin: auto;
+		width: 85px;
+		height: 40px;
+		
+		@include atMedium {
+			width: 100%;
+		}
 	}
 
 	&-icon-svg {
@@ -69,8 +86,8 @@
 		left: 0;
 		pointer-events: none;
 		fill: #fff;
-		width: 34px;
-		height: 34px;
+		width: 40px;
+		height: 40px;
 	}
 
 	&-icon-text {
@@ -80,17 +97,17 @@
 		height: auto;
 		color: #fff;
 		font-size: 12px;
-		padding-bottom: 10px;
+		padding-top: 10px;
 	}
 
 	&-text {
 		display: inline-block;
 		text-align: left;
-		padding-left: 24px;
+		padding: 10px 0 0 24px;
 		font-size: 16px;
-		width: 252px;
+		width: 285px;
 		color: #ffffff;
-		background-color: #333333;
+		background-color: $dark-grey;
 		border-bottom: 1px solid #4d4d4d;
 		transition: background-color 150ms ease-in;
 

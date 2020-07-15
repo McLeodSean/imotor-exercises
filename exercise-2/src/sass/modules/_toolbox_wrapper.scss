@@ -2,19 +2,19 @@
 	display: block;
 	position: fixed;
 	width: 322px;
-	right: -252px;
+	right: -237px;
 	top: 190px;
 	transition: transform 250ms ease-in;
 
 	&:hover {
-		transform: translateX(-252px);
+		transform: translateX(-285px);
 	}
 
 	&-left {
-		left: -252px;
+		left: -285px;
 
 		&:hover {
-			transform: translateX(252px);
+			transform: translateX(285px);
 		}
 	}
 
