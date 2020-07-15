@@ -1,6 +1,6 @@
 # Exercise 2 [![Build Status](https://travis-ci.org/cferdinandi/gulp-boilerplate.svg)](https://travis-ci.org/cferdinandi/gulp-boilerplate)
 
-CSS/HTML Exercise 1: https://3.basecamp.com/4139771/buckets/10262158/documents/2489730024
+CSS/HTML Exercise 2: https://3.basecamp.com/4139771/buckets/10262158/documents/2489730024
 
 ## Instructions
 
