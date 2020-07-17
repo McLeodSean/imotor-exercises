@@ -1,0 +1,43 @@
+@mixin atSmall {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
+
+@mixin atMedium {
+	@media (max-width: 1268px) {
+		@content;
+	}
+}
+
+@mixin atLarge {
+	@media (max-width: 1500px) {
+		@content;
+	}
+}
+
+@mixin gridMaker($numCol, $marginRight, $marginBottomPx) {
+	width: (100% - (($numCol - 1) * $marginRight)) / $numCol;
+	margin-bottom: $marginBottomPx;
+
+	&:nth-child(n) {
+		margin-right: $marginRight;
+	}
+
+	&:nth-child(#{$numCol}n) {
+		margin-right: 0;
+	}
+}
+
+@mixin clearfix {
+	&::before {
+		content: "";
+		display: table;
+	}
+
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}

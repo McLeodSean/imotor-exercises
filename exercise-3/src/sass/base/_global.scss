@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'ToyotaType-Regular';
+	src: url('../fonts/ToyotaType-Regular.ttf') format('truetype'),
+		 url('../fonts/ToyotaType-Regular.woff') format('woff'),
+		 url('../fonts/ToyotaType-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 100%;
+}
+
+body {
+	font-family: 'ToyotaType-Regular', sans-serif;
+	margin: 0;
+	background-color: $light-grey;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}

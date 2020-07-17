@@ -1,0 +1,31 @@
+.toolbox-wrapper {
+	display: block;
+	position: fixed;
+	width: 322px;
+	right: -237px;
+	top: 190px;
+	transition: transform 250ms ease-in;
+
+	&:hover {
+		transform: translateX(-285px);
+	}
+
+	&-left {
+		left: -285px;
+
+		&:hover {
+			transform: translateX(285px);
+		}
+	}
+
+	@include atMedium {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		&:hover {
+			transform: none;
+		}
+	}
+}
