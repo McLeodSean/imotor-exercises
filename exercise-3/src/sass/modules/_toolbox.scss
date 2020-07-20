@@ -18,8 +18,8 @@
 		border: 0;
 		width: 100%;
 
-		&:hover {
-			
+		&:hover .toolbox-text-wrapper {
+			transform: translateX(-285px);
 		}
 
 		@include atMedium {
@@ -31,13 +31,13 @@
 		}
 
 		&:first-child .toolbox-icon-wrapper {
-			border-top-right-radius: 30px;
-			border-top-left-radius: 30px;
+			border-top-right-radius: 37px;
+			border-top-left-radius: 37px;
 		}
 
 		&:last-child .toolbox-icon-wrapper {
-			border-bottom-right-radius: 30px;
-			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 37px;
+			border-bottom-left-radius: 37px;
 		}
 	}
 
@@ -57,15 +57,13 @@
 
 	&-icon-wrapper {
 		@include clearfix;
-
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-content: center;
-		width: 85px;
+		width: 77px;
 		background-color: #ffffff;
-		height: 85px;
-		transition: background-color 150ms ease-in;
+		height: 75px;
 		border: 1px solid $border-grey;
 		border-bottom: 0;
 
@@ -76,8 +74,8 @@
 	}
 
 	&-icon {
-		width: 60px;
-		height: 56px;
+		width: 40px;
+		height: 40px;
 		
 		@include atMedium {
 			width: 100%;
@@ -94,16 +92,29 @@
 		height: 40px;
 	}
 
+	&-text-wrapper{
+		display: flex;
+		justify-content: flex-end;
+		width: 180px;
+		background: none;
+		opacity: 1;
+		margin-left: 10px;
+		transition: transform 350ms ease-in-out;
+		z-index: -1;
+	}
+
 	&-text {
-		display: inline-block;
-		text-align: left;
-		padding: 10px 0 0 24px;
-		font-size: 16px;
-		width: 285px;
-		color: #ffffff;
-		background-color: $dark-grey;
+		display: block;
+		padding: 0 18px;
+		line-height: 40px;
+		font-size: 14px;
+		width: auto;
+		height: 45px;
+		margin: auto 0 auto;
+		border-radius: 25px;
+		color: $brand-primary-color;
+		background-color: #ffffff;
 		border-bottom: 1px solid #4d4d4d;
-		transition: background-color 150ms ease-in;
 
 		@include atMedium {
 			display: none;

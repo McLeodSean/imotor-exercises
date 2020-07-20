@@ -42,26 +42,16 @@ img {
   display: block;
   position: fixed;
   width: 322px;
-  right: -237px;
+  right: -220px;
   top: 190px;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
 
-/* line 9, src/sass/modules/_toolbox_wrapper.scss */
-.toolbox-wrapper:hover {
-  -webkit-transform: translateX(-285px);
-          transform: translateX(-285px);
-}
-
-/* line 13, src/sass/modules/_toolbox_wrapper.scss */
+/* line 8, src/sass/modules/_toolbox_wrapper.scss */
 .toolbox-wrapper-left {
   left: -285px;
 }
 
-/* line 16, src/sass/modules/_toolbox_wrapper.scss */
+/* line 11, src/sass/modules/_toolbox_wrapper.scss */
 .toolbox-wrapper-left:hover {
   -webkit-transform: translateX(285px);
           transform: translateX(285px);
@@ -75,7 +65,7 @@ img {
     left: 0;
     width: 100%;
   }
-  /* line 27, src/sass/modules/_toolbox_wrapper.scss */
+  /* line 22, src/sass/modules/_toolbox_wrapper.scss */
   .toolbox-wrapper:hover {
     -webkit-transform: none;
             transform: none;
@@ -115,6 +105,12 @@ img {
   width: 100%;
 }
 
+/* line 21, src/sass/modules/_toolbox.scss */
+.toolbox-row:hover .toolbox-text-wrapper {
+  -webkit-transform: translateX(-285px);
+          transform: translateX(-285px);
+}
+
 @media (max-width: 1268px) {
   /* line 15, src/sass/modules/_toolbox.scss */
   .toolbox-row {
@@ -132,14 +128,14 @@ img {
 
 /* line 33, src/sass/modules/_toolbox.scss */
 .toolbox-row:first-child .toolbox-icon-wrapper {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  border-top-right-radius: 37px;
+  border-top-left-radius: 37px;
 }
 
 /* line 38, src/sass/modules/_toolbox.scss */
 .toolbox-row:last-child .toolbox-icon-wrapper {
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 37px;
+  border-bottom-left-radius: 37px;
 }
 
 /* line 45, src/sass/modules/_toolbox.scss */
@@ -177,11 +173,9 @@ img {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 85px;
+  width: 77px;
   background-color: #ffffff;
-  height: 85px;
-  -webkit-transition: background-color 150ms ease-in;
-  transition: background-color 150ms ease-in;
+  height: 75px;
   border: 1px solid #ccc;
   border-bottom: 0;
 }
@@ -207,20 +201,20 @@ img {
   }
 }
 
-/* line 78, src/sass/modules/_toolbox.scss */
+/* line 76, src/sass/modules/_toolbox.scss */
 .toolbox-icon {
-  width: 60px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 1268px) {
-  /* line 78, src/sass/modules/_toolbox.scss */
+  /* line 76, src/sass/modules/_toolbox.scss */
   .toolbox-icon {
     width: 100%;
   }
 }
 
-/* line 87, src/sass/modules/_toolbox.scss */
+/* line 85, src/sass/modules/_toolbox.scss */
 .toolbox-icon-svg {
   position: relative;
   top: 0;
@@ -231,22 +225,42 @@ img {
   height: 40px;
 }
 
-/* line 97, src/sass/modules/_toolbox.scss */
+/* line 95, src/sass/modules/_toolbox.scss */
+.toolbox-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 180px;
+  background: none;
+  opacity: 1;
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  z-index: -1;
+}
+
+/* line 106, src/sass/modules/_toolbox.scss */
 .toolbox-text {
-  display: inline-block;
-  text-align: left;
-  padding: 10px 0 0 24px;
-  font-size: 16px;
-  width: 285px;
-  color: #ffffff;
-  background-color: #333333;
+  display: block;
+  padding: 0 18px;
+  line-height: 40px;
+  font-size: 14px;
+  width: auto;
+  height: 45px;
+  margin: auto 0 auto;
+  border-radius: 25px;
+  color: #d7302c;
+  background-color: #ffffff;
   border-bottom: 1px solid #4d4d4d;
-  -webkit-transition: background-color 150ms ease-in;
-  transition: background-color 150ms ease-in;
 }
 
 @media (max-width: 1268px) {
-  /* line 97, src/sass/modules/_toolbox.scss */
+  /* line 106, src/sass/modules/_toolbox.scss */
   .toolbox-text {
     display: none;
   }
