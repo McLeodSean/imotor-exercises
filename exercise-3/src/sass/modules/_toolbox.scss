@@ -20,7 +20,12 @@
 
 		&:hover .toolbox-text-wrapper {
 			transform: translateX(-285px);
+
+			.toolbox-wrapper-left & {
+				transform: translateX(285px);
+			}
 		}
+
 
 		@include atMedium {
 			display: block;
@@ -33,11 +38,19 @@
 		&:first-child .toolbox-icon-wrapper {
 			border-top-right-radius: 37px;
 			border-top-left-radius: 37px;
+
+			@include atMedium {
+				border-radius: 0;
+			}
 		}
 
 		&:last-child .toolbox-icon-wrapper {
 			border-bottom-right-radius: 37px;
 			border-bottom-left-radius: 37px;
+
+			@include atMedium {
+				border-radius: 0;
+			}
 		}
 	}
 
@@ -69,7 +82,9 @@
 
 		@include atMedium {
 			width: 100%;
-			border-right: 1px solid $brand-secondary-color;
+			border: none;
+			border-right: 1px solid $border-grey;
+			border-bottom: 1px solid $border-grey;
 		}
 	}
 
@@ -92,6 +107,21 @@
 		height: 40px;
 	}
 
+	&-icon-text {
+		display: none;
+		margin: 0 auto;
+		float: none;
+		line-height: normal;
+		height: auto;
+		color: $brand-primary-color;
+		font-size: 12px;
+		padding-top: 5px;
+
+		@include atMedium {
+			display: inline-block;
+		}
+	}
+
 	&-text-wrapper{
 		display: flex;
 		justify-content: flex-end;
@@ -101,6 +131,16 @@
 		margin-left: 10px;
 		transition: transform 350ms ease-in-out;
 		z-index: -1;
+
+		.toolbox-wrapper-left & {
+			justify-content: flex-start;
+			margin: none;
+			margin-right: 10px;
+		}
+
+		@include atMedium {
+			display: none;
+		}
 	}
 
 	&-text {
@@ -114,7 +154,6 @@
 		border-radius: 25px;
 		color: $brand-primary-color;
 		background-color: #ffffff;
-		border-bottom: 1px solid #4d4d4d;
 
 		@include atMedium {
 			display: none;

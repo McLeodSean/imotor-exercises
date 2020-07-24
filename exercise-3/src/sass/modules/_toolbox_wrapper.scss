@@ -6,11 +6,7 @@
 	top: 190px;
 
 	&-left {
-		left: -285px;
-
-		&:hover {
-			transform: translateX(285px);
-		}
+		left: -220px;
 	}
 
 	@include atMedium {
