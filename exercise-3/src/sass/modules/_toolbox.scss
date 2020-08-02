@@ -20,12 +20,13 @@
 
 		&:hover .toolbox-text-wrapper {
 			transform: translateX(-285px);
+			opacity: 1;
 
 			.toolbox-wrapper-left & {
 				transform: translateX(285px);
+				opacity: 1;
 			}
 		}
-
 
 		@include atMedium {
 			display: block;
@@ -50,6 +51,17 @@
 
 			@include atMedium {
 				border-radius: 0;
+			}
+		}
+
+		.toolbox-wrapper-circle & {
+			margin-bottom: 10px;
+
+			animation: animateCircle 500ms ease-in-out forwards;
+			animation-delay: calc(var(--i) * 100ms);
+
+			@include atMedium {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -80,6 +92,14 @@
 		border: 1px solid $border-grey;
 		border-bottom: 0;
 
+		.toolbox-wrapper-circle & {
+			border-radius: 50%;
+
+			@include atMedium {
+				border-radius: 0;
+			}
+		}
+
 		@include atMedium {
 			width: 100%;
 			border: none;
@@ -89,8 +109,16 @@
 	}
 
 	&-icon {
+		opacity: 0;
 		width: 40px;
 		height: 40px;
+		animation: animateIcon 500ms ease-in-out forwards;
+		animation-delay: calc(var(--i) * 100ms);
+
+		.toolbox-wrapper-circle & {
+			opacity: 1;
+			animation: none;	
+		}
 		
 		@include atMedium {
 			width: 100%;
@@ -125,17 +153,20 @@
 	&-text-wrapper{
 		display: flex;
 		justify-content: flex-end;
-		width: 180px;
+		width: 200px;
 		background: none;
-		opacity: 1;
+		opacity: 0;
 		margin-left: 10px;
 		transition: transform 350ms ease-in-out;
 		z-index: -1;
 
+		animation: animateTextInRight 2500ms ease-in-out calc(var(--i) * 100ms) backwards;
+		
 		.toolbox-wrapper-left & {
-			justify-content: flex-start;
+			flex-direction: row-reverse;
 			margin: none;
 			margin-right: 10px;
+			animation: animateTextInLeft 2500ms ease-in-out calc(var(--i) * 100ms) backwards;
 		}
 
 		@include atMedium {
@@ -154,6 +185,17 @@
 		border-radius: 25px;
 		color: $brand-primary-color;
 		background-color: #ffffff;
+
+		@include atMedium {
+			display: none;
+		}
+	}
+
+	&-text-space {
+		display: block;
+		height: 100%;
+		background: 0;
+		width: 20px;
 
 		@include atMedium {
 			display: none;
