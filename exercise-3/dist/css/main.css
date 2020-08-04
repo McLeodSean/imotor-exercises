@@ -456,7 +456,6 @@ img {
           justify-content: flex-end;
   width: 200px;
   background: none;
-  opacity: 0;
   margin-left: 10px;
   -webkit-transition: -webkit-transform 350ms ease-in-out;
   transition: -webkit-transform 350ms ease-in-out;
@@ -467,7 +466,7 @@ img {
           animation: animateTextInRight 2500ms ease-in-out calc(var(--i) * 100ms) backwards;
 }
 
-/* line 165, src/sass/modules/_toolbox.scss */
+/* line 164, src/sass/modules/_toolbox.scss */
 .toolbox-wrapper-left .toolbox-text-wrapper {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -486,7 +485,7 @@ img {
   }
 }
 
-/* line 177, src/sass/modules/_toolbox.scss */
+/* line 176, src/sass/modules/_toolbox.scss */
 .toolbox-text {
   display: block;
   padding: 0 18px;
@@ -501,13 +500,13 @@ img {
 }
 
 @media (max-width: 1268px) {
-  /* line 177, src/sass/modules/_toolbox.scss */
+  /* line 176, src/sass/modules/_toolbox.scss */
   .toolbox-text {
     display: none;
   }
 }
 
-/* line 194, src/sass/modules/_toolbox.scss */
+/* line 193, src/sass/modules/_toolbox.scss */
 .toolbox-text-space {
   display: block;
   height: 100%;
@@ -516,7 +515,7 @@ img {
 }
 
 @media (max-width: 1268px) {
-  /* line 194, src/sass/modules/_toolbox.scss */
+  /* line 193, src/sass/modules/_toolbox.scss */
   .toolbox-text-space {
     display: none;
   }
